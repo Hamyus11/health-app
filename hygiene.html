@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygiene - Healthy Living</title>
+    <style>
+        :root {
+            --primary: #00BCD4;    /* Cyan */
+            --secondary: #FF4081;  /* Pink */
+            --accent: #3F51B5;     /* Indigo */
+            --bg: #E1F5FE;         /* Light Blue Background */
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; }
+
+        nav {
+            background-color: #0097A7;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: #FFEB3B; }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        .hero h2 { color: var(--accent); font-size: 2rem; }
+        
+        .hero-image {
+            max-width: 600px;
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .card-icon { font-size: 4rem; margin-bottom: 15px; display: block; }
+
+        .card h3 { color: var(--primary); margin-bottom: 10px; }
+
+        footer {
+            background-color: var(--text);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🚿 Personal Hygiene 🚿</h1>
+    </header>
+
+    <nav>
+        <a href="healthy-living.html">Home</a>
+        <a href="hygiene.html">Hygiene</a>
+        <a href="food.html">Food</a>
+        <a href="exercise.html">Exercise</a> 
+    </nav>
+
+    <div class="hero">
+        <h2>Stay Clean, Stay Healthy!</h2>
+        <p>Keeping our bodies clean helps us fight germs and feel great.</p>
+        <img src="https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&w=800&q=80" alt="Washing hands" class="hero-image">
+    </div>
+
+    <div class="container">
+        <div>
+            <h2>What is Hygiene?</h2>
+            <p>Hygiene refers to conditions and practices that help to maintain health and prevent the spread of diseases. Keeping clean is key to staying healthy.</p>
+        </div>
+
+        <div>
+            <h2>Types of Hygiene</h2>
+            <p>
+                <ol>
+                    <li>Personal Hygiene: Caring for one's own body, including bathing, washing hands, and trimming nails.</li>
+                    <li>Oral Hygiene: Practices to keep the mouth, teeth, and gums clean and healthy.</li>
+                    <li>Hand Hygiene: Washing hands with soap and water to remove germs and prevent the spread of illness.</li>
+                    <li>Environmental Hygiene: Keeping our surroundings, like our room and school, clean and organized.</li>
+                    <li>Sleep Hygiene: Habits that help you have a good night's sleep for better health and focus.</li>
+                </ol>
+            </p>
+        </div>
+
+        <div>
+            <h2>Benefits of Good Hygiene</h2>
+            <p>
+                <ul>
+                    <li>Disease Prevention: Good hygiene kills germs and stops the spread of illnesses like the flu.</li>
+                    <li>Better Oral Health: Proper dental care prevents cavities, gum disease, and bad breath.</li>
+                    <li>Social Confidence: Being clean and fresh helps you feel confident in social situations.</li>
+                    <li>Pain Prevention: Preventing infections and dental problems avoids pain and discomfort.</li>
+                    <li>Overall Well-being: Cleanliness contributes to a feeling of well-being and self-respect.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">🧼</span>
+                <h3>Wash Your Hands</h3>
+                <p>Wash with soap and water for 20 seconds (sing "Happy Birthday" twice!) before eating and after playing.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🦷</span>
+                <h3>Brush & Floss</h3>
+                <p>Brush your teeth twice a day to keep cavities away. Don't forget to floss!</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🚿</span>
+                <h3>Daily Bath</h3>
+                <p>Taking a bath or shower every day washes away dirt and sweat from playing.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">👕</span>
+                <h3>Clean Clothes</h3>
+                <p>Wear fresh clothes every day, especially socks and underwear!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; STEM - 2026 Girls in Science Project</p></footer>
+</body>
+</html>

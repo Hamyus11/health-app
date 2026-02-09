@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - Healthy Living</title>
+    <style>
+        :root {
+            --primary: #9C27B0;    /* Purple */
+            --secondary: #FFEB3B;  /* Yellow */
+            --accent: #E91E63;     /* Pink */
+            --bg: #F3E5F5;         /* Light Purple Background */
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; }
+
+        nav {
+            background-color: #7B1FA2;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--secondary); }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        .hero h2 { color: var(--primary); font-size: 2rem; }
+
+        .hero-image {
+            max-width: 600px;
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .card-icon { font-size: 4rem; margin-bottom: 15px; display: block; }
+
+        .card h3 { color: var(--primary); margin-bottom: 10px; }
+
+        footer {
+            background-color: var(--text);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🏃‍♀️ Let's Move! 🏃‍♂️</h1>
+    </header>
+
+    <nav>
+        <a href="healthy-living.html">Home</a>
+        <a href="hygiene.html">Hygiene</a>
+        <a href="food.html">Food</a>
+        <a href="exercise.html">Exercise</a> 
+    </nav>
+
+    <div class="hero">
+        <h2>Active Body, Happy Mind!</h2>
+        <p>Moving your body makes your heart strong and your muscles tough.</p>
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80" alt="Students exercising in gym class" class="hero-image">
+    </div>
+
+    <div class="container">
+        <div>
+            <h2>What is Exercise</h2>
+            <p>Exercise is a physical activity that helps body fitness and expands energy.</p>
+        </div>
+
+        <div>
+            <h2>Types of Exercise</h2>
+            <p>
+                <ol>
+                    <li>Aerobic Exercise: Activities like running, swimming, or brisk walking that improve cardiovascular endurance</li>
+                    <li>Strength Training: Exercises such as push-ups, weightlifting, or resistance training that build muscle strength.</li>
+                    <li>Flexibility Training: Stretching exercises that enhance the range of motion in your joints.</li>
+                    <li>Balance Exercises: Activities that improve stability and coordination, such as yoga or tai chi.</li>
+                    <li>Sport-Specific Training: Exercises tailored to improve performance in a specific sport.</li>
+                </ol>      
+            </p>
+        </div>
+
+        <div>
+            <h2>Benefits of Exercise</h2>
+            <p>
+                <ul>
+                    <li>Weight Management: Exercise helps control weight by burning calories and increasing metabolism. Regular physical activity can prevent excess weight.</li>
+                    <li>Disease Prevention: Engaging in regular physical activity reduces the risk of chronic diseases such as heart disease and stroke.</li>
+                    <li>Improved Cardiovascular Health: Exercise boosts high-density lipoprotein (HDL) cholesterol (the "good" cholesterol) and decreases unhealthy physics.</li>
+                    <li>Enhanced Muscle and Bone Strength: Regular strength training and weight-bearing exercises improve muscle strength and bone.</li>
+                    <li>Better Mental Health: Exercise releases endorphins, which can improve mood and reduce feelings of depression and anxiety.</li>
+                </ul>        
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">⚽</span>
+                <h3>Play Sports</h3>
+                <p>Soccer, basketball, or tag—playing games with friends is great exercise.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🚲</span>
+                <h3>Ride a Bike</h3>
+                <p>Cycling is fun and helps you explore the outdoors while getting fit.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">💃</span>
+                <h3>Dance</h3>
+                <p>Put on your favorite music and dance around the room!</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🧘</span>
+                <h3>Stretch</h3>
+                <p>Stretching keeps you flexible. Try some simple yoga poses.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; STEM - 2026 Girls in Science Project</p></footer>
+</body>
+</html>

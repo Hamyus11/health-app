@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Living for Students</title>
+    <style>
+        :root {
+            --primary: #4CAF50;    /* Green */
+            --secondary: #FF9800;  /* Orange */
+            --accent: #2196F3;     /* Blue */
+            --bg: #E0F7FA;         /* Light Blue Background */
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #388E3C;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: white;
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        .hero h2 {
+            color: var(--accent);
+            font-size: 2rem;
+        }
+
+        .hero-icons {
+            font-size: 4rem;
+            margin-top: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--text);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+            border-color: var(--secondary);
+        }
+
+        .card-icon {
+            font-size: 5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌟 Healthy Living 🌟</h1>
+    </header>
+
+    <nav>
+        <a href="healthy-living.html">Home</a>
+        <a href="hygiene.html">Hygiene</a>
+        <a href="food.html">Food</a>
+        <a href="exercise.html">Exercise</a> 
+    </nav>
+
+    <div class="hero">
+        <h2>Be Smart, Be Strong, Be Healthy!</h2>
+        <p>Good habits start today. Let's learn how to take care of our bodies.</p>
+        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80" alt="Group of happy healthy kids" class="hero-image">
+        <div class="hero-icons">🍎 🏃‍♂️ 💧 🦷</div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">My Healthy Habits</div>
+        
+        <div class="grid">
+            <!-- Card 1: Hygiene -->
+            <div class="card">
+                <div class="card-icon">🚿</div>
+                <h3>Personal Hygiene</h3>
+                <p>Take a bath every day and wash your hands with soap to keep germs away!</p>
+            </div>
+
+            <!-- Card 2: Oral Care -->
+            <div class="card">
+                <div class="card-icon">🦷</div>
+                <h3>Brush Your Teeth</h3>
+                <p>Brush twice a day, morning and night, to keep your smile bright and healthy.</p>
+            </div>
+
+            <!-- Card 3: Healthy Eating -->
+            <div class="card">
+                <div class="card-icon">🥗</div>
+                <h3>Eat Your Veggies</h3>
+                <p>Fruits and vegetables give you the vitamins you need to grow tall and strong.</p>
+            </div>
+
+            <!-- Card 4: Hydration -->
+            <div class="card">
+                <div class="card-icon">💧</div>
+                <h3>Drink Water</h3>
+                <p>Drink plenty of water instead of sugary sodas to stay hydrated and focused.</p>
+            </div>
+
+            <!-- Card 5: Exercise -->
+            <div class="card">
+                <div class="card-icon">⚽</div>
+                <h3>Active Play</h3>
+                <p>Run, jump, and play sports for at least 60 minutes every day.</p>
+            </div>
+
+            <!-- Card 6: Sleep -->
+            <div class="card">
+                <div class="card-icon">😴</div>
+                <h3>Good Sleep</h3>
+                <p>Go to bed early! Your body needs rest to recharge for a fun day tomorrow.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; STEM - 2026 Girls in Science Project</p>
+    </footer>
+
+</body>
+</html>

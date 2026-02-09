@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Box</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .box {
+            width: 120px;
+            height: 120px;
+            background-color: #3498db;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background-color 0.3s;
+            user-select: none;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            background-color: #2980b9;
+        }
+        .box.correct {
+            background-color: #27ae60;
+            animation: bounce 0.6s ease;
+            cursor: default;
+        }
+        .box.wrong {
+            background-color: #c0392b;
+            animation: shake 0.4s ease;
+            cursor: default;
+        }
+        #status {
+            margin-top: 25px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            min-height: 1.5em;
+            color: #333;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #34495e;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        @keyframes shake {
+            0%, 100% {transform: translateX(0);}
+            25% {transform: translateX(-10px);}
+            75% {transform: translateX(10px);}
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Guess the Box</h1>
+    <p>One of these boxes holds the prize. Can you find it?</p>
+
+    <h2 id="scoreDisplay">Score: 0</h2>
+    <p id="statusDisplay">Find the prize!</p>
+
+
+    <div class="container">
+        <div class="box" role="button" tabindex="0">?</div>
+        <div class="box" role="button" tabindex="0">?</div>
+        <div class="box" role="button" tabindex="0">?</div>
+    </div>
+
+        <button onclick="resetGame()">Play Again</button>
+
+   <script>
+    const boxes = document.querySelectorAll('.box');
+    const statusDisplay = document.getElementById('statusDisplay');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+
+    let winningIndex;
+    let isGameOver = false;
+    let score = 0; // score counter
+
+    function init() {
+        isGameOver = false;
+        winningIndex = Math.floor(Math.random() * boxes.length);
+        statusDisplay.textContent = 'Find the prize!';
+        statusDisplay.style.color = '#333';
+
+        boxes.forEach(box => {
+            box.className = 'box';
+            box.textContent = '?';
+        });
+    }
+
+    boxes.forEach((box, index) => {
+        box.addEventListener('click', function() {
+
+            if (isGameOver || this.classList.contains('wrong')) return;
+
+            if (index === winningIndex) {
+                this.classList.add('correct');
+                this.textContent = '★';
+
+                statusDisplay.textContent = '🎉 You found the prize!';
+                statusDisplay.style.color = '#27ae60';
+
+                score++; // increase score
+                scoreDisplay.textContent = "Score: " + score;
+
+                isGameOver = true;
+            } 
+            else {
+                this.classList.add('wrong');
+                this.textContent = '✗';
+
+                statusDisplay.textContent = 'Empty! Try another one.';
+                statusDisplay.style.color = '#c0392b';
+
+                score--; // decrease score
+                scoreDisplay.textContent = "Score: " + score;
+            }
+
+        });
+    });
+
+    function resetGame() {
+        init();
+    }
+
+    // Initialize on load
+    init();
+</script>
+</body>
+</html>
